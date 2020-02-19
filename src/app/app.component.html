@@ -1,0 +1,19 @@
+<h2>updateOn: change</h2>
+<form novalidate [formGroup]="changeForm">
+  input:<input formControlName="changeInput" /><br />
+  childInput:<app-child formControlName="changeChildInput"></app-child><br />
+  <pre>
+{{ changeForm.value | json }}
+  </pre>
+</form>
+
+<hr />
+
+<h2>updateOn: blur</h2>
+<form novalidate [formGroup]="blurForm">
+  input:<input formControlName="blurInput" /><br />
+  childInput:<app-child formControlName="blurChildInput"></app-child><-- is not woking?<br />
+  <pre>
+{{ blurForm.value | json }}
+  </pre>
+</form>
